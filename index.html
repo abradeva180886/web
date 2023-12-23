@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head><script>
+<!--
+
+/*
+Auto Refresh Page with Time script
+By JavaScript Kit (javascriptkit.com)
+Over 200+ free scripts here!
+*/
+
+//enter refresh time in "minutes:seconds" Minutes should range from 0 to inifinity. Seconds should range from 0 to 59
+var limit="0:40"
+
+var doctitle = document.title
+var parselimit=limit.split(":")
+parselimit=parselimit[0]*60+parselimit[1]*1
+
+function beginrefresh(){
+	if (parselimit==1)
+		window.location.reload()
+	else{ 
+		parselimit-=1
+		curmin=Math.floor(parselimit/60)
+		cursec=parselimit%60
+		if (curmin!=0)
+			curtime=curmin+" minutes and "+cursec+" seconds left until page refresh!"
+		else
+			curtime=cursec+" seconds left until page refresh!"
+		document.title = doctitle + ' (' + curtime +')'
+		setTimeout("beginrefresh()",1000)
+	}
+}
+
+if (window.addEventListener)
+	window.addEventListener("load", beginrefresh, false)
+else if (window.attachEvent)
+	window.attachEvent("load", beginrefresh)
+
+//-->
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #000000;
+	background-image: url(esfera.gif);
+}
+body,td,th {
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.style6 {font-size: 3cm}
+.style7 {
+	font-size: 2cm;
+	color: #00FF00;
+}
+.style9 {font-size: 18px}
+.style10 {font-size: 36px}
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+</head>
+
+<body>
+
+<div id="Layer1" style="position:absolute; left:446px; top:14px; width:1481px; height:214px; z-index:1">
+  <script>
+//set style for NS4 to ''
+if (document.layers)
+var ns4def=''
+</script>
+
+<h2 id="flyin" style="position:relative;left:-1200px;font-style:italic" style=&{ns4def};>
+<span class="style7">Bienvenidos a mi pagina UCAD</span><span class="style6"></h2>
+</span>
+<script language="JavaScript1.2">
+
+/*
+Fly-in Header script (credit must stay enclosed)
+By javascriptkit.com
+For this and over 400+ JavaScripts,
+Visit http://www.javascriptkit.com
+*/
+
+
+if (document.getElementById||document.all)
+var crossheader=document.getElementById? document.getElementById("flyin").style : document.all.flyin.style
+
+function animatein(){
+if (parseInt(crossheader.left)<0)
+crossheader.left=parseInt(crossheader.left)+20+"px"
+else{
+crossheader.left=0
+crossheader.fontStyle="normal"
+clearInterval(start)
+}
+}
+
+if (document.getElementById||document.all)
+start=setInterval("animatein()",50)
+
+
+</script>
+
+<p align="center">
+</a></p></div>
+<div id="Layer2" class="style9" style="position:absolute; left:454px; top:335px; width:1110px; height:251px; z-index:2">
+  <script type = "text/javascript">
+
+// Note: Like all Javascript password scripts, this is hopelessly insecure as the user can see 
+//the valid usernames/passwords and the redirect url simply with View Source.  
+// And the user can obtain another three tries simply by refreshing the page.  
+//So do not use for anything serious!
+
+var count = 2;
+function validate() {
+var un = document.myform.username.value;
+var pw = document.myform.pword.value;
+var valid = false;
+
+var unArray = ["Abraham", "Osorio", "Ucad", "Isc"];  // as many as you like - no comma after final entry
+var pwArray = ["Delgadillo", "Osito", "Ucad", "Isc"];  // the corresponding passwords;
+
+for (var i=0; i <unArray.length; i++) {
+if ((un == unArray[i]) && (pw == pwArray[i])) {
+valid = true;
+break;
+}
+}
+
+if (valid) {
+alert ("Login was successful");
+window.location = "https://abradeva180886.github.io/trabajoisc/index1.htm";
+return false;
+}
+
+var t = " tries";
+if (count == 1) {t = " try"}
+
+if (count >= 1) {
+alert ("Invalid username and/or password.  You have " + count + t + " left.");
+document.myform.username.value = "";
+document.myform.pword.value = "";
+setTimeout("document.myform.username.focus()", 25);
+setTimeout("document.myform.username.select()", 25);
+count --;
+}
+
+else {
+alert ("Still incorrect! You have no more tries left!");
+document.myform.username.value = "No more tries allowed!";
+document.myform.pword.value = "";
+document.myform.username.disabled = true;
+document.myform.pword.disabled = true;
+return false;
+}
+
+}
+
+</script>
+
+<form name = "myform" class="style10">
+<p>ENTER USER NAME <input type="text" name="username"> ENTER PASSWORD <input type="password" name="pword">
+<input type="button" value="Check In" name="Submit" onclick= "validate()">
+</p>
+
+</form>
+</div>
+<div id="Layer3" style="position:absolute; left:819px; top:289px; width:402px; height:123px; z-index:3">
+<script language="JavaScript">
+<!--
+var name=prompt("INGRESA TODO TU NOMBRE CON MAYUSCULAS.","NOMBRE");
+var today = new Date ()
+var hrs = today.getHours();
+document.writeln("<b>");
+document.writeln("<b>");
+if (hrs <= 12)
+        document.write("BUENOS DIAS "+name+'!');
+else if (hrs <= 18)
+        document.write("BUENAS TARDES "+name+'!');
+else
+     document.write("BUENAS NOCHES "+name+'!'); document.writeln("<br />");
+// -->
+</script></div>
+<div id="Layer1" style="position:absolute; left:244px; top:327px; width:1172px; height:174px; z-index:1"><script>
+//set style for NS4 to ''
+if (document.layers)
+var ns4def=''
+</script>
+
+
+
+<script language="JavaScript1.2">
+
+/*
+Fly-in Header script (credit must stay enclosed)
+By javascriptkit.com
+For this and over 400+ JavaScripts,
+Visit http://www.javascriptkit.com
+*/
+
+
+if (document.getElementById||document.all)
+var crossheader=document.getElementById? document.getElementById("flyin").style : document.all.flyin.style
+
+function animatein(){
+if (parseInt(crossheader.left)<0)
+crossheader.left=parseInt(crossheader.left)+20+"px"
+else{
+crossheader.left=0
+crossheader.fontStyle="normal"
+clearInterval(start)
+}
+}
+
+if (document.getElementById||document.all)
+start=setInterval("animatein()",50)
+
+</html>
